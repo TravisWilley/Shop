@@ -2,12 +2,19 @@ import React from 'react';
 import CartButton from './CartButton';
 import CategorySelector from './CategorySelector';
 import SearchBar from './SearchBar';
+import { useNavigate } from 'react-router-dom';
 
 export default function Navbar({ title }) {
+  const nav = useNavigate();
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top border-bottom">
       <div className="container-fluid px-5-md">
-        <span id="name" className="navbar-brand fw-bold pointer">
+        <span
+          onClick={() => nav('/')}
+          id="name"
+          className="navbar-brand fw-bold pointer"
+        >
           {title}
         </span>
         <button

@@ -1,11 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const items = [1, 2, 3];
+const items = [];
 const btnBgColor = items.length === 0 ? 'none' : 'white';
 
 export default function CartButton() {
+  const nav = useNavigate();
   return (
     <button
+      onClick={() => nav('/cart')}
       className="btn btn-outline-success d-md-block mt-3 mt-lg-0"
       type="button"
     >

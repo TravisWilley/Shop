@@ -1,11 +1,12 @@
 import React from 'react';
+import Product from './Product';
 
 export default function Products({ products = [] }) {
   return (
     <div>
-      <ul>
+      <ul className="px-5">
         {products.map((product) => (
-          <li>{product.name}</li>
+          <Product key={product.id} product={product} />
         ))}
       </ul>
     </div>
