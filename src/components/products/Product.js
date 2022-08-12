@@ -12,6 +12,7 @@ export default function Product({ product = [] }) {
           className="card-img-top pointer"
           onClick={() => nav(`/single/${product.id}`)}
           title={product.name}
+          alt=""
         />
         <div className="card-body p-4">
           <div className="text-center">

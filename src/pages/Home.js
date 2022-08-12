@@ -1,7 +1,9 @@
 import React from 'react';
 import Products from '../components/products/Products';
-import data from '../data';
+import { useSelector } from 'react-redux';
 
 export default function Home() {
-  return <Products products={data} />;
+  const { productsFromSearch } = useSelector((state) => state.products);
+
+  return <Products products={productsFromSearch} />;
 }

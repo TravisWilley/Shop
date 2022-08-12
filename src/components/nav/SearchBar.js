@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useSelector } from 'react-redux';
 
 export default function SearchBar() {
-  const [text, setText] = useState('');
+  const {} = useSelector((state) => state.products);
 
   return (
     <form onSubmit={(e) => e.preventDefault()} className="d-flex ms-0 ms-lg-3">
       <input
         type="text"
         placeholder="Search Products"
-        onChange={(e) => {
-          setText(e.target.value);
-        }}
         className="form-control ms-md-auto me-2"
+        onChange={(e) => {}}
+        value="Hello World"
       />
     </form>
   );
